@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<robot name="MainFrame" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find MainFrame_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find MainFrame_description)/urdf/MainFrame.trans" />
+<xacro:include filename="$(find MainFrame_description)/urdf/MainFrame.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="0.009276431125051967 1.6993928877369e-05 0.0025" rpy="0 0 0"/>
+    <mass value="1.1068864051955176"/>
+    <inertia ixx="0.015296" iyy="0.020619" izz="0.03591" ixy="-2e-06" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://MainFrame_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://MainFrame_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+</robot>
